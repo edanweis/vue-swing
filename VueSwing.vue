@@ -5,7 +5,7 @@
 </template>
 
 <script>
-const Swing = require('swing')
+import Swing from 'https://cdn.skypack.dev/swing';
 
 export default {
   name: 'vue-swing',
@@ -19,7 +19,9 @@ export default {
       observer: null
     }
   },
-
+  created(){
+    // console.log(Swing)
+  },
   mounted () {
     this.stack = Swing.Stack(this.config || {})
     let children = Array.prototype.slice.call(this.$el.children)
